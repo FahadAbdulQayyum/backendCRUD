@@ -21,10 +21,11 @@ app.use(
     cors({
         // origin: [process.env.FRONTEND_URL], 
         // origin: process.env.FRONTEND_URL,
-        origin: `${process.env.FRONTEND_URL}`,
+        // origin: `${process.env.FRONTEND_URL}`,
+        "origin": "*",
         // origin: 'http://localhost:3000',
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true,
+        "methods": "GET", "POST", "PUT", "DELETE",
+        "credentials": true,
     })
 );
 
