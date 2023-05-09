@@ -9,7 +9,7 @@ export const connectDB = () => {
     //     .catch((e) => console.log(e));
 
     mongoose.connect(
-        process.env.MONGO_URL, { dbName: "backendapi1" },
+        process.env.MONGO_URL, { dbName: "backendapi" },
         { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
         () => {
             console.log('Connected to MongoDB');
