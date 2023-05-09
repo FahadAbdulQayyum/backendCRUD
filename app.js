@@ -35,7 +35,7 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/task", taskRouter);
 
 app.get("/", (req, res) => {
-    res.send("Nice working");
+    res.send(`Nice working on PORT: ${process.env.PORT}`);
 });
 
 // Using Error Middleware
