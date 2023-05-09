@@ -7,7 +7,8 @@ export const login = async (req, res, next) => {
     try {
         const { email, password } = req.body;
 
-        const user = await User.findOne({ email }).select("+password");
+        // const user = await User.findOne({ email }).select("+password");
+        const user = await User.find({ email }).select("+password");
 
         // if (!user) return next(new ErrorHandler("Invalid Email or Password", 400));
         if (!user) return res.json({ success: false, message: 'Invalid Email or Password' });
