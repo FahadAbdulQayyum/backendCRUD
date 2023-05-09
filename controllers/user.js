@@ -30,8 +30,8 @@ export const register = async (req, res, next) => {
     try {
         const { name, email, password } = req.body;
 
-        // let user = await User.findOne({ email });
-        let user = await User.find({ email })
+        let user = await User.findOne({ email });
+        // let user = await User.find({ email })
 
         // if (user) return next(new ErrorHandler("User Already Exist", 400));
         if (user) return res.json({ success: false, message: 'User already exists' });
